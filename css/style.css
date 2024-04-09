@@ -1,0 +1,12 @@
+th
+{
+    background-color: lightgrey;
+    color: black;
+	text-align: center;
+}
+
+
+input[type=text]
+{
+	width: 100%;
+}

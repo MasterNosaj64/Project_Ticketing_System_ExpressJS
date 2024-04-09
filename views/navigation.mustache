@@ -1,0 +1,11 @@
+<div class="topnav">
+  <a href="/home" {{#homenav}}class="curnav"{{/homenav}}>Home</a>
+  <a href="/client" {{#clientnav}}class="curnav"{{/clientnav}}>Clients</a>
+  <a href="/ticket" {{#ticketnav}}class="curnav"{{/ticketnav}}>Tickets</a>
+  {{#displaylogin}}
+    <a href="/login" {{#loginnav}}class="curnav"{{/loginnav}}>Login</a>
+  {{/displaylogin}}
+  {{#displaylogout}}
+    <a href="/login/logout">Logout</a>
+  {{/displaylogout}}
+</div>

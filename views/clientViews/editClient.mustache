@@ -1,0 +1,93 @@
+{{>header}}
+
+{{>navigation}}
+{{#editclient}}
+<div>
+  <h2>Edit Client</h2>
+  <table class="table table-striped">
+    <tr>
+      <th>Name</th>
+      <th>Website</th>
+      <th>Email</th>
+      <th>Street</th>
+      <th>City</th>
+      <th>Province</th>
+    </tr>
+          <form method="post" action="client/editclient" name="edit_company" autocomplete="off">
+		        <table class="form-table" border='1'>
+			        <thead>
+				        <tr>
+					        <th colspan=2>
+						        <h2>Client</h2>
+					        </th>
+					        <th colspan=2>
+						        <h2>Description</h2>
+					        </th>
+				        </tr>
+			        </thead>
+			        <tr>
+				        <td>*Name:</td>
+				        <td><input type="text" required name="name" value="{{company_name}}"></td>
+				        <td>Note:</td>
+				        <td><textarea name="description" rows=3>{{description}}</textarea></td>
+			        </tr>
+			        <tr>
+				        <td>*Website:</td>
+				        <td><input type="url" required value="{{website}}" name="website"></td>
+				        <td>Industry:</td>
+				        <td><input type="text" value="{{industry}}" name="industry"></td>
+			        </tr>
+			        <tr>
+				        <td>Company Email:</td>
+				        <td><input type="email" value="{{email}}" name="email"></td>
+				        <td>Type:</td>
+				        <td><input type="text" value="{{type}}" name="type"></td>
+			        </tr>
+			        <thead>
+				        <tr>
+					        <th colspan=2>
+						        <h2>Billing Address</h2>
+					        </th>
+					        <th colspan=2>
+						        <h2>Shipping Address</h2>Same as billing address<input type="checkbox" id="shippingSameAsBilling" name="shippingSameAsBilling">
+					        </th>
+				        </tr>
+			        </thead>
+			        <tr>
+				        <td>*Street:</td>
+				        <td><input type="text" required value="{{billing_address_street}}" name="billingStreet"></td>
+				        <td>Street:</td>
+				        <td><input type="text" value="{{shipping_address_street}}" name="shippingStreet"></td>
+			        </tr>
+			        <tr>
+				        <td>*City:</td>
+				        <td><input type="text" value="{{billing_address_city}}" required name="billingCity"></td>
+				        <td>City:</td>
+				        <td><input type="text" value="{{shipping_address_city}}" name="shippingCity"></td>
+			        </tr>
+			        <tr>
+				        <td>*State:</td>
+				        <td><input type="text" value="{{billing_address_province}}" required name="billingProvince"></td>
+				        <td>State:</td>
+				        <td><input type="text" value="{{shipping_address_province}}" name="shippingProvince"></td>
+			        </tr>
+			        <tr>
+				        <td>*Postal Code:</td>
+				        <td><input type="text" value="{{billing_address_postalcode}}" required name="billingPostalCode"></td>
+				        <td>Postal Code:</td>
+				        <td><input type="text" value="{{shipping_address_postalcode}}" name="shippingPostalCode"></td>
+			        </tr>
+			        <tr>
+				        <td>*Country:</td>
+				        <td><input type="text" value="{{billing_address_country}}" required name="billingCountry"></td>
+				        <td>Country:</td>
+				        <td><input type="text" value="{{shipping_address_country}}" name="shippingCountry"></td>
+			        </tr>
+		        </table>
+		        <input type="submit" name="submit" value="Submit">
+	        </form>
+    </form>
+  </table>
+</div>
+{{/editclient}}
+{{>footer}}

@@ -1,0 +1,36 @@
+{{>header}}
+
+{{>navigation}}
+
+{{#clients}}
+<div>
+  <h2>Clients</h2>
+  <table class="table table-striped">
+    <tr>
+      <th>Name</th>
+      <th>Website</th>
+      <th>Email</th>
+      <th>Street</th>
+      <th>City</th>
+      <th>Province</th>
+      {{! TODO:
+      created by and last modified by if admin if logged in }}
+      <th></th>
+    </tr>
+
+        <tr>
+          <td>{{company_name}}</td>
+          <td>{{website}}</td>
+          <td>{{company_email}}</td>
+          <td>{{billing_address_street}}</td>
+          <td>{{billing_address_city}}</td>
+          <td>{{billing_address_province}}</td>
+          {{! TODO:
+          created by and last modified by if admin if logged in }}
+          <td><a href="/client/editClient?id={{company_id}}">edit</a> | <a href="/client/viewClient?id={{company_id}}">view</a></td>
+        </tr>
+
+  </table>
+</div>
+{{/clients}}
+{{>footer}}
