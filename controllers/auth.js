@@ -12,7 +12,7 @@ async function login (req, res) {
   res.render("login", req.TPL);
 }
 
-// Attempts to login a user
+// Attempts to authenticate a user
 // - The action for the form submit on the login page.
 async function authenticate(req, res) {
   try {
@@ -37,13 +37,16 @@ async function authenticate(req, res) {
 }
 
 // Logout a user
-// - Destroys the session key username that is used to determine if a user
-// is logged in, re-directs them to the home page.
-async function logout (req, res) {
-  delete (req.session.username);
-  delete (req.session.role);
-  res.redirect("/login");
+async function logout(req, res) {
+  req.session.destroy((err) => {
+    if (err) {
+      console.error('Failed to destroy the session during logout:', err);
+      return res.status(500).send("Could not log out.");
+    }
+    res.redirect("/login");
+  });
 }
+
 
 
 module.exports = {login, authenticate, logout};

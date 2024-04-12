@@ -1,11 +1,17 @@
-<div class="topnav">
-  <a href="/home" {{#homenav}}class="curnav"{{/homenav}}>Home</a>
-  <a href="/client" {{#clientnav}}class="curnav"{{/clientnav}}>Clients</a>
-  <a href="/ticket" {{#ticketnav}}class="curnav"{{/ticketnav}}>Tickets</a>
-  {{#displaylogin}}
-    <a href="/login" {{#loginnav}}class="curnav"{{/loginnav}}>Login</a>
-  {{/displaylogin}}
-  {{#displaylogout}}
-    <a href="/login/logout">Logout</a>
-  {{/displaylogout}}
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Tickets Express</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav">
+                <a class="nav-link {{#homenav}}curnav{{/homenav}}" href="/home">Home</a>
+                <a class="nav-link {{#clientnav}}curnav{{/clientnav}}" href="/client">Clients</a>
+                <a class="nav-link {{#ticketnav}}curnav{{/ticketnav}}" href="/ticket">Tickets</a>
+                <a class="nav-link" href="/logout">Logout</a>
+            </div>
+        </div>
+    </div>
+</nav>
