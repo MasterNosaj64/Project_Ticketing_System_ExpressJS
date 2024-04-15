@@ -1,0 +1,44 @@
+{{>header}}
+
+{{>navigation}}
+
+<div>
+
+    <table class="table table-striped">
+        <tr>
+            <th>First Name</th><th>Last Name</th><th>Username</th><th>Email</th><th></th><th></th><th></th>
+        </tr>
+        <tbody>
+        <!-- logic here for printing rows for each user-->
+        {{#users}}
+            <tr>
+                <td>{{first_name}}</td>
+                <td>{{last_name}}</td>
+                <td>{{username}}</td>
+                <td><a href="mailto:{{user_email}}">{{user_email}}</a></td>
+                <td>Edit Button</td>
+                <td>Lock Button</td>
+                <td>Delete Button</td>
+            </tr>
+        {{/users}}
+        </tbody>
+        <tfoot>
+        <tr>
+            <td>{{users.length}} Records</td>
+            <td><a href=""><<</a> <a href=""><</a> Page x of x <a href="">></a> <a href="">>></a></td>
+            <td>
+                <label for="pageSize">Page Size:</label>
+                <select id="pageSize" name="pageSize">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+
+</div>
+
+{{>footer}}

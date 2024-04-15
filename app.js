@@ -8,11 +8,11 @@ const fs = require('fs');
 //const path = require('path');
 
 //define routes
-const clientRoutes = require('./routes/client');
-const userRoutes = require('./routes/user');
+const clientRoute = require('./routes/client');
+const adminRoute = require('./routes/admin');
 //const ticketRoutes = require('./routes/ticket');
-const authRoutes = require('./routes/auth');
-const homeRoutes = require('./routes/home');
+const authRoute = require('./routes/auth');
+const homeRoute = require('./routes/home');
 const logoutRoute = require('./routes/logout');
 
 app.get('/', (req, res) => {
@@ -88,14 +88,11 @@ app.use((req, res, next) => {
 // - We define all of our routes inside our controllers, and include them in
 // our main app script.
 //
-app.use("/home", homeRoutes);
-app.use("/client", clientRoutes);
-//app.use("/company/geteditCompany", require("./controllers/company"));
-//app.use("/client/editClient", clientRoutes);
-//app.use("/customer", require("./controllers/customer"));
+app.use("/home", homeRoute);
+app.use("/client", clientRoute);
 //app.use("/interaction", require("./controllers/interaction"));
-app.use("/user", userRoutes);
-app.use("/login", authRoutes);
+app.use("/admin", adminRoute);
+app.use("/login", authRoute);
 app.use("/logout", logoutRoute);
 //app.use("/admin", require("./controllers/admin"));
 

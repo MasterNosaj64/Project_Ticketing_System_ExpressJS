@@ -1,6 +1,6 @@
 //const express = require('express');
 //const router = express.Router();
-//const UsersModel = require('../models/user.js')
+//const UsersModel = require('../models/admin.js')
 const ClientModel = require('../models/client.js')
 
 async function getAllClients(req, res) {

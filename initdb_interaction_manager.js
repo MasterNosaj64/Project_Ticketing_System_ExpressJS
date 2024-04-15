@@ -68,6 +68,42 @@ CREATE TABLE ticket(
 INSERT INTO user (user_id, first_name, last_name, title, department, work_phone, reports_to, date_entered, date_modified, modified_by, username, STATUS, user_email, password) VALUES
 (1, 'admin', 'admin', 'admin', 'admin', NULL, 1, NULL, '2020/12/08', 1, 'admin', '0', 'admin@interaction_manager.com', 'admin');
 
+INSERT INTO user (user_id, first_name, last_name, title, department, work_phone, reports_to, date_entered, date_modified, modified_by, username, STATUS, user_email, password) VALUES
+    (2, 'User1', 'User1', 'User1', 'User1', NULL, 1, NULL, '2020/12/08', 1, 'User1', '0', 'User1@interaction_manager.com', 'User1');
+
+INSERT INTO user (user_id, first_name, last_name, title, department, work_phone, reports_to, date_entered, date_modified, modified_by, username, STATUS, user_email, password) VALUES
+    (3, 'User2', 'User2', 'User2', 'User2', NULL, 1, NULL, '2020/12/08', 1, 'User2', '0', 'User2@interaction_manager.com', 'User2');
+
+INSERT INTO user (user_id, first_name, last_name, title, department, work_phone, reports_to, date_entered, date_modified, modified_by, username, STATUS, user_email, password) VALUES
+    (4, 'User3', 'User3', 'User3', 'User3', NULL, 1, NULL, '2020/12/08', 1, 'User3', '0', 'User3@interaction_manager.com', 'User3');
+
+INSERT INTO user (user_id, first_name, last_name, title, department, work_phone, reports_to, date_entered, date_modified, modified_by, username, STATUS, user_email, password) VALUES
+    (5, 'User4', 'User4', 'User4', 'User4', NULL, 1, NULL, '2020/12/08', 1, 'User4', '0', 'User4@interaction_manager.com', 'User4');
+
+INSERT INTO user (user_id, first_name, last_name, title, department, work_phone, reports_to, date_entered, date_modified, modified_by, username, STATUS, user_email, password) VALUES
+    (6, 'User5', 'User5', 'User5', 'User5', NULL, 1, NULL, '2020/12/08', 1, 'User5', '0', 'User5@interaction_manager.com', 'User5');
+
+INSERT INTO user (user_id, first_name, last_name, title, department, work_phone, reports_to, date_entered, date_modified, modified_by, username, STATUS, user_email, password) VALUES
+    (7, 'User6', 'User6', 'User6', 'User6', NULL, 1, NULL, '2020/12/08', 1, 'User6', '0', 'User6@interaction_manager.com', 'User6');
+
+INSERT INTO user (user_id, first_name, last_name, title, department, work_phone, reports_to, date_entered, date_modified, modified_by, username, STATUS, user_email, password) VALUES
+    (8, 'User7', 'User7', 'User7', 'User7', NULL, 1, NULL, '2020/12/08', 1, 'User7', '0', 'User7@interaction_manager.com', 'User7');
+
+INSERT INTO user (user_id, first_name, last_name, title, department, work_phone, reports_to, date_entered, date_modified, modified_by, username, STATUS, user_email, password) VALUES
+    (9, 'User8', 'User8', 'User8', 'User8', NULL, 1, NULL, '2020/12/08', 1, 'User8', '0', 'User8@interaction_manager.com', 'User8');
+
+INSERT INTO user (user_id, first_name, last_name, title, department, work_phone, reports_to, date_entered, date_modified, modified_by, username, STATUS, user_email, password) VALUES
+    (10, 'User9', 'User9', 'User9', 'User9', NULL, 1, NULL, '2020/12/08', 1, 'User9', '0', 'User9@interaction_manager.com', 'User9');
+
+INSERT INTO user (user_id, first_name, last_name, title, department, work_phone, reports_to, date_entered, date_modified, modified_by, username, STATUS, user_email, password) VALUES
+    (11, 'UserA', 'UserA', 'UserA', 'UserA', NULL, 1, NULL, '2020/12/08', 1, 'UserA', '0', 'UserA@interaction_manager.com', 'UserA');
+
+INSERT INTO user (user_id, first_name, last_name, title, department, work_phone, reports_to, date_entered, date_modified, modified_by, username, STATUS, user_email, password) VALUES
+    (12, 'UserB', 'UserB', 'UserB', 'UserB', NULL, 1, NULL, '2020/12/08', 1, 'UserB', '0', 'UserB@interaction_manager.com', 'UserB');
+
+INSERT INTO user (user_id, first_name, last_name, title, department, work_phone, reports_to, date_entered, date_modified, modified_by, username, STATUS, user_email, password) VALUES
+    (13, 'UserC', 'UserC', 'UserC', 'UserC', NULL, 1, NULL, '2020/12/08', 1, 'UserC', '0', 'UserC@interaction_manager.com', 'UserC');
+
 `;
 
 // Execute SQL commands

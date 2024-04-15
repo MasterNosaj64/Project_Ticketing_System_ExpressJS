@@ -58,7 +58,7 @@ async function getUser(id){
 //   }
 // }
 
-//delete articles
+//delete user
 async function deleteUser(id)
 {
   try{

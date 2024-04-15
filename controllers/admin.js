@@ -1,6 +1,6 @@
 //const express = require('express');
 // router = express.Router()
-const UsersModel = require('../models/user.js')
+const UsersModel = require('../models/admin.js')
 
 async function getAllUsers(req, res){
 
@@ -10,9 +10,8 @@ async function getAllUsers(req, res){
 
     if ( usersResults != null) {
 
-      res.render('user', {
-        companies: usersResults,
-        users: true
+      res.render('admin', {
+        users: usersResults
       });
     }
     else {

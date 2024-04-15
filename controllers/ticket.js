@@ -1,6 +1,6 @@
 //const express = require('express');
 //const router = express.Router();
-//const UsersModel = require('../models/user.js')
+//const UsersModel = require('../models/admin.js')
 const TicketModel = require('../models/ticket.js')
 
 async function getAllTickets(req, res) {
