@@ -24,9 +24,15 @@
         </tbody>
         <tfoot>
         <tr>
-            <td>{{users.length}} Records</td>
-            <td><a href=""><<</a> <a href=""><</a> Page x of x <a href="">></a> <a href="">>></a></td>
-            <td>
+            <td id="recordCount" colspan="7">{{users.length}} Records</td>
+        </tr>
+        <tr>
+            <td colspan="7">
+                <a href="#" id="firstPage"><<</a>
+                <a href="#" id="prevPage"><</a>
+                Page <span id="currentPage">1</span> of <span id="totalPages">1</span>
+                <a href="#" id="nextPage">></a>
+                <a href="#" id="lastPage">>></a>
                 <label for="pageSize">Page Size:</label>
                 <select id="pageSize" name="pageSize">
                     <option value="10">10</option>
@@ -38,7 +44,50 @@
         </tr>
         </tfoot>
     </table>
-
 </div>
-
 {{>footer}}
+<script>
+
+    function fetchUsers(pageNumber, pageSize){
+
+
+    }
+
+    function handlePagination(event) {
+        event.preventDefault();
+        const pageNumber = parseInt(document.getElementById("currentPage").innerText);
+        const pageSize = parseInt(document.getElementById("pageSize").value);
+        const totalPages = parseInt(document.getElementById("totalPages").innerText);
+
+        let newPageNumber;
+        if (event.target.id === "firstPage") {
+            newPageNumber = 1;
+        } else if (event.target.id === "prevPage") {
+            newPageNumber = Math.max(pageNumber - 1, 1);
+        } else if (event.target.id === "nextPage") {
+            newPageNumber = Math.min(pageNumber + 1, totalPages);
+        } else if (event.target.id === "lastPage") {
+            newPageNumber = totalPages;
+        }
+
+        if (newPageNumber !== pageNumber) {
+            fetchUsers(newPageNumber, pageSize);
+            document.getElementById("currentPage").innerText = newPageNumber;
+        }
+    }
+
+
+    document.getElementById("firstPage").addEventListener("click", handlePagination);
+    document.getElementById("prevPage").addEventListener("click", handlePagination);
+    document.getElementById("nextPage").addEventListener("click", handlePagination);
+    document.getElementById("lastPage").addEventListener("click", handlePagination);
+
+
+    document.getElementById("pageSize").addEventListener("change", function() {
+        fetchUsers(1, parseInt(this.value)); // Fetch first page with new page size
+        document.getElementById("currentPage").innerText = 1; // Reset to first page
+    });
+
+
+    fetchUsers(1, parseInt(document.getElementById("pageSize").value));
+</script>

@@ -11,7 +11,8 @@ router.use(
 
 router.get('/', adminController.getAllUsers);
 router.get('/user/:id', adminController.getUser);
-router.get('/edituser/', adminController.editUser);
-router.get('/deleteuser', adminController.deleteUser);
+router.get('/edituser/:id', adminController.editUser);
+router.get('/deleteuser/:id', adminController.deleteUser);
+
 
 module.exports = router;

@@ -54,7 +54,18 @@ async function editUser(req, res){
 }
 
 async function deleteUser(req, res){
-  //render to all users page
+  const userId = req.params.id;
+  try {
+    const result = await adminModel.deleteUser(userId);
+    if (result) {
+      res.json({ success: true });
+    } else {
+      res.status(404).json({ error: "User not found" });
+    }
+  } catch (error) {
+    console.error("Error deleting user:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
 }
 
 module.exports = {getAllUsers, getUser, editUser, deleteUser};
